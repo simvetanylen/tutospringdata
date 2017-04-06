@@ -37,7 +37,7 @@ function disconnect() {
 }
 
 function sendName() {
-    stompClient.send(document.getElementById("destination").value, {
+    stompClient.send("/app/hello", {
     }, JSON.stringify({
         'name': $("#name").val(),
         'toUser' : $("#name").val()
