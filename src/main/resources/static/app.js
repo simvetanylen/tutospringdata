@@ -16,11 +16,8 @@ function connect() {
     var socket = new SockJS('/gs-guide-websocket');
     stompClient = Stomp.over(socket);
     stompClient.connect({
-                                        "Auth-Token" : document.getElementById("login").value,
-                                        "user" : document.getElementById("login").value,
-                                        "password" : document.getElementById("password").value,
-                                        "token" : "1234"
-                                    }
+           "user" : document.getElementById("login").value
+    }
 
     , function (frame) {
         setConnected(true);
